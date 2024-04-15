@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang=" en " xmlns:th=" http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"-->
+    <!--          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style>
+        body, html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .login-form {
+            background: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        button,
+        select {
+            width: calc(100% - 160px); /* Chiều rộng ô nhập liệu là 100% trừ đi kích thước của nhãn */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%; /* Đảm bảo nút đăng nhập có chiều rộng 100% */
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .login-form > div {
+            display: flex;
+            margin-bottom: 10px; /* Khoảng cách giữa các dòng */
+        }
+
+        .label_name {
+
+            width: 150px; /* Đặt chiều rộng cố định cho nhãn */
+            text-align: right; /* Căn chữ sang phải */
+            padding-right: 10px; /* Tạo khoảng cách giữa nhãn và ô nhập liệu */
+            line-height: 34px; /* Đảm bảo căn giữa dọc cho nhãn */
+        }
+
+        .label_name, .input_field {
+            text-align: left;
+        }
+
+        .container {
+            width: 500px;
+            height: 600px;
+        }
+
+        .login-form {
+            background: #f2f2f2;
+            padding: 20px;
+            height: 100%; /* Chiều cao của form */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .label_name, .input_field {
+            text-align: left; /* Căn lề trái cho nhãn và ô nhập liệu */
+            margin-bottom: 10px; /* Khoảng cách giữa nhãn và ô nhập liệu */
+        }
+
+        .label_name {
+            width: 29%; /* Đặt chiều rộng cố định cho nhãn */
+        }
+
+        .input_field {
+            width: calc(65% - 10px); /* Đặt chiều rộng cố định cho ô nhập liệu */
+        }
+
+        .modal1_close {
+            justify-content: space-between;
+        }
+
+        .form-control {
+            width: calc(65% - 10px);
+        }
+
+        .button_addproduct {
+
+            position: absolute;
+            top: 89%;
+            right: 10px;
+            margin: 2px; /* Khoảng cách từ nút tới cạnh container */
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group label {
+            flex: 0 0 30%;
+            margin-right: 15px;
+        }
+
+        .form-group input,
+        .form-group select {
+            flex: 1;
+        }
+
+        .button_addproduct {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="login-form">
+
+        <div class="modal1_close js-buy-close-eye">
+            <h2>ADD Procut</h2>
+            <a th:href="@{/view}">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                     viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
+            </a>
+        </div>
+
+
+        <form action="#" th:action="@{/saveProduct}" th:object="${product}" method="post">
+            <div class="form-group">
+                <label class="label_name">ProductName</label>
+                <input type="text" th:field="*{produceName}" placeholder="Name Product"
+                       class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="label_name">color</label>
+                <input type="text" th:field="*{color}" placeholder="color"
+                       class="form-control ">
+            </div>
+            <div class="form-group">
+                <label class="label_name">Origin Price</label>
+                <input type="text" th:field="*{originPrice}"
+                       class="form-control ">
+            </div>
+            <div class="form-group">
+                <label class="label_name">Quantity</label>
+                <input type="text" th:field="*{quantity}"
+                       class="form-control ">
+            </div>
+            <div class="form-group">
+                <label class="label_name">Sell Price</label>
+                <input type="text" th:field="*{sellPrice}"
+                       class="form-control ">
+            </div>
+
+            <div class="form-group">
+
+                <label class="label_name">Brand Name</label>
+                <select class="input_field" aria-label="Default select example" th:field="*{brandID}">
+                    <option th:each="brand : ${listBrandController}" th:value="${brand.id}"
+                            th:text="${brand.brandName}">
+                        Brand Name
+                    </option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label class="label_name">Subcategory</label>
+                <select class="input_field" aria-label="Default select example" th:field="*{subCateName}">-->
+                    <option th:each="subcategory : ${listcomboxSubcategory}" th:value="${subcategory.id}" th:text=
+                            " ${subcategory.subCateName}">
+                        subCategory
+                    </option>
+                </select>
+
+            </div>
+
+            <div class="button_addproduct">
+                <button type="submit" class="btn btn-success btn" style="margin-right: 10px">Save</button>
+                <a href="#" class="btn btn-success" th:href="@{/view}">Close</a>
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

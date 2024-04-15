@@ -1,0 +1,169 @@
+
+.from__input {
+    display: flex;
+    justify-content: space-around;
+}
+
+.input__status {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.btn-success {
+
+    margin-top: 10px;
+    margin-left: 20px;
+    position: absolute;
+    top: 89%;
+    right: 10px;
+    margin: 2px;
+}
+
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+
+.btn_add {
+    margin-top: -20px;
+
+}
+
+
+.modal1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    /*background: rgba(0, 0, 0, 0.4);*/
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.modal1_container {
+
+    background: #fff;
+}
+
+.modal1-body {
+    display: flex;
+
+    border-radius: unset;
+}
+
+.footer-button-save {
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.footer-button-close {
+    background-color: lightslategray;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.modal1-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.modal1_container {
+    width: 600px;
+    max-width: calc(100% - 32px);
+    height: 450px;
+    min-height: 200px;
+    position: relative;
+}
+
+.modal1-input {
+    width: 90%;
+}
+
+.modal1-label {
+
+}
+
+.modal1-input_tt {
+    margin: 10px;
+    width: 95%;
+}
+
+.modal1-input_radio {
+    padding: 5px;
+    margin: 8px;
+    width: 95%;
+}
+
+.modal1_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+}
+
+.modal1_header {
+
+    margin-left: 20px;
+}
+
+.modal1.open {
+    display: flex;
+}
+
+
+.modal--remove--container {
+    background: #fff;
+    width: 600px;
+    max-width: calc(100% - 32px);
+    height: 450px;
+    min-height: 200px;
+    position: relative;
+}
+
+.modal--remove {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal--remove.open {
+    display: flex;
+}
+
+.modal--update {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal--update.open {
+    display: flex;
+}
+
